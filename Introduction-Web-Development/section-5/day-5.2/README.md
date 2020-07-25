@@ -1,0 +1,1 @@
+Exercícios sobre DOM e seletores - aula 5.2
