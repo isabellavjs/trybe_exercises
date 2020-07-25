@@ -41,4 +41,4 @@ _"Trybe is a school of the future that was founded with the purpose of generatin
 6. Project 04: Art with Pixels
 7. Project 05: To-do list
 8. Project 06: Guessing which color (bonus)
-9. Project 07: Misterious letter (bonus)
+9. Project 07: Mysterious letter (bonus)
