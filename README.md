@@ -31,3 +31,14 @@ _"Trybe is a school of the future that was founded with the purpose of generatin
 3. JavaScript: Programming logic and algorithms
 4. JavaScript: Objects and functions
 5. Project 02: Playground functions
+
+### Section 5: Introduction to JavaScript
+1. JavaScript: DOM and selectors
+2. JavaScript: working with elements
+3. JavaScript: elements
+4. JavaScript: Web Storage
+5. Project 03: Meme generator
+6. Project 04: Art with Pixels
+7. Project 05: To-do list
+8. Project 06: Guessing which color (bonus)
+9. Project 07: Misterious letter (bonus)
