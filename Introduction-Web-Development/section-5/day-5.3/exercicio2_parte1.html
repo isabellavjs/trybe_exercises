@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+      function squareNumber () {
+          const givenNumber = document.getElementById("square-input").value;
+          const squareResult = Math.sqrt(givenNumber);
+          const outputResultDiv = document.getElementById("solution");
+            outputResultDiv.innerHTML = squareResult;
+      };
+
+      function halfNumber () {
+        const givenNumber2 = document.getElementById("half-input").value;
+        const halfResult = Math.sqrt(givenNumber2);
+        const outputResultDiv = document.getElementById("solution");
+        outputResultDiv.innerHTML = halfResult;
+
+      };
+      function percentOf () {
+
+      };
+      function areaOfCircle () {
+
+      };
+
+      const squareButtonCalculator = document.getElementById("square-button");
+      const halfButtonCalculator = document.getElementById("half-button");
+      const percentButtonCalculator = document.getElementById("percent-button");
+      const areaButtonCalculator = document.getElementById("area-button");
+
+      squareButtonCalculator.addEventListener("click", squareNumber);
+      halfButtonCalculator.addEventListener("click", halfNumber);
+      percentButtonCalculator.addEventListener("click", percentOf);
+      areaButtonCalculator.addEventListener("click", areaOfCircle);
+
+  </script>
+  
+</body>
+</html>

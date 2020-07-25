@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <style>
+     .styling1 {
+      border-color: black;
+      border-style: solid;
+    }
+  
+    .styling2 {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="styling1">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="styling2">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.getElementsByClassName("styling1")[0];
+      paragraph.style.color = "red";
+      paragraph.innerHTML = "é um filme legal que eu quero assistir";
+      paragraph.style.color = "blue";
+
+      var pageTitle = document.getElementById("page-title");
+      pageTitle.innerHTML = "Estrelas além do tempo";
+
+      var secondParagraph = document.getElementById("second-paragraph");
+      secondParagraph.innerHTML = "Filmes legais";
+      secondParagraph.style.color = "blue";
+
+      var subtitle = document.getElementById("subtitle");
+      subtitle.innerHTML = "Rambo";
+      subtitle.style.color = "red";
+
+    
+    </script>
+  </body>
+</html>
