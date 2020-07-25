@@ -1,1 +1,1 @@
-Shel script exercises - 1.3
+Shell script exercises - 1.3
