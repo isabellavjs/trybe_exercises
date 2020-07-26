@@ -27,8 +27,8 @@
                 <p>Add a HTML button to this page in the area highlighted below.  Using the <b>onClick()</b> event handler have the button, when clicked, open an <b>alert()</b> box which says &quot;You clicked the button&quot;. 
                 
                 <div class="exampleblock">            
-                    <button type="button" id="click-button" onclick="alertMessage()">Click here</button>
-                </div>                
+                    Add your button here
+                </div>             
 			
             	<h2>Task 2</h2>
                 
@@ -36,21 +36,45 @@
                 
                 <p>Add a HTML button below the &lt;script&gt; tag.  Give this button an <b>onClick</b> event handler.  When the button is clicked it should multiply <b>gamePrice</b> by <b>discount</b> and present an alert box containing the phrase &quot;&pound;(result) off!&quot;.  You will need <a href="http://nptcstudents.co.uk/andrewg/jsweb/maths.html" target="_blank">concatenation</a> to achieve this.</p> 
               
-            	<script language="javascript" type="text/javascript">
-				var buttonOne = document.getElementById("click-button");
-                function alertMessage() {
-                    alert("You clicked the button");
-                };
+                <script language="javascript" type="text/javascript">
+                
+                //Exercise 1
+
+                const bottonContainer = document.querySelector('.exampleblock');
+                const bottonOne = document.createElement("button");
+                bottonOne.textContent = "Botton 1";
+                bottonOne.addEventListener('click', function () {
+                    alert ('You clicked the button');
+                })
+                bottonContainer.appendChild(bottonOne);
+
+                //Exercise 2
 
                 var gamePrice = 39.99;
                 var discount = 0.20;
+
                 function multiplyNubers() {
                     var resultMultiplication = gamePrice * discount;
                     alert ("£" + resultMultiplication.toFixed(2) + " " + "off");
                 };
 
+                //Extension
+
+                var image = document.createElement('img');
+                image.src = 'image1.jpg';
+                var innerDiv = document.querySelector('#pagecontent');
+                innerDiv.appendChild(image);
+
+                image.addEventListener("mouseover", function () {
+                    image.src = "image2.jpg";
+                });
+                image.addEventListener("mouseout", function () {
+                    image.src = "image1.jpg";
+                });
+
                 </script>
-                <button type="button" onclick="multiplyNubers()">Click here</button>
+                <button type="button" onclick="multiplyNubers()">click here</button>
+                
                 
                 <p>You may want to consider using JavaScript's built in <a href="http://www.w3schools.com/js/js_obj_math.asp" target="_blank">Maths object</a> to round the number you get in your result to a more reasonable one.</p>
             
