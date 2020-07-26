@@ -8,3 +8,6 @@ Add events to a given page. Exercise description can be acessed at: [Exercises p
 
 ### Part III:
 Add events to a given image, aiming to make it move. Exercise description can be acessed at: [Exercises part 3] (https://www.teaching-materials.org/jsweb/exercises/animation)
+
+### Part IV:
+Exercicing reading and HTML, CSS and JS code interpretation at CodePen. Exercises can be acessed at: [CodePen] (https://codepen.io/prosetech/pen/oRxMmZ)
