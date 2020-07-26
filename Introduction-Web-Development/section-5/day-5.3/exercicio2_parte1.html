@@ -37,25 +37,32 @@
   <div id="solution"></div>
 
   <script>
+
+var outputResultDiv = document.getElementById("solution");
+
       function squareNumber () {
-          const givenNumber = document.getElementById("square-input").value;
-          const squareResult = Math.sqrt(givenNumber);
-          const outputResultDiv = document.getElementById("solution");
-            outputResultDiv.innerHTML = squareResult;
+          var givenNumber = document.getElementById("square-input").value;
+          var squareResult = givenNumber*givenNumber;
+          outputResultDiv.innerHTML = "The result of squaring the number" + " " + givenNumber + " " + "is" + " " + squareResult;
       };
 
       function halfNumber () {
-        const givenNumber2 = document.getElementById("half-input").value;
-        const halfResult = Math.sqrt(givenNumber2);
-        const outputResultDiv = document.getElementById("solution");
-        outputResultDiv.innerHTML = halfResult;
-
+        var givenNumber2 = document.getElementById("half-input").value;
+        var halfResult = givenNumber2 / 2;
+        outputResultDiv.innerHTML = "Half of" + " " + givenNumber2 + " " + "is" + " " + halfResult;
       };
+
       function percentOf () {
-
+        var firstNumber = document.getElementById('percent1-input').value;
+        var secondNumber = document.getElementById('percent2-input').value;
+        var percentageResult = (firstNumber / secondNumber) * 100;
+        outputResultDiv.innerHTML = firstNumber +" " +  "is" + " " + percentageResult + "%" + " " + "of" + " " + secondNumber;
       };
-      function areaOfCircle () {
 
+      function areaOfCircle () {
+        var radius = document.getElementById("area-input").value;
+        var areaResult = Math.PI * radius ** 2;
+        outputResultDiv.innerHTML = "The area for a circle with radius" + " " + radius + " " + "is" + " " + areaResult.toFixed(2);
       };
 
       const squareButtonCalculator = document.getElementById("square-button");
