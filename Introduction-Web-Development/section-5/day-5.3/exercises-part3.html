@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  
+<script>
+    //Select the image of a cat and sets it to 0px from the left border.
+    var catImage = document.getElementsByTagName("img")[0];
+    catImage.style.left = "0px"
+    var walkForward = true;
+
+    function catWalk() {
+        //Stores the position of the cat image relative to the left size
+        var leftSize = parseInt(catImage.style.left);
+        //Defines the condition in which the cat is going to walk
+        if ( walkForward && leftSize > (window.innerWidth - catImage.width)) {
+            walkForward = false;
+        }
+        //Defines the condition in which the cat is going to walk back forward.
+        if (!walkForward && leftSize < 0) {
+            walkForward = true;
+        }
+        //If walkForward is true, the cat is going to move leftSize + 10 px from the border
+        if (walkForward) {
+            catImage.style.left = (leftSize + 10) + 'px';;
+        } 
+        //If walkforwad is false, the cat is going to deacrease 10px from its leftSize position and it will move back forward.
+        else {
+            catImage.style.left = (leftSize - 10) + 'px';
+        }
+    }
+
+    window.setInterval(catWalk, 50);
+</script> 
+</body>
+</html>
