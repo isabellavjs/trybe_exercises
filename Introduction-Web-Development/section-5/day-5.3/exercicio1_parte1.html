@@ -19,19 +19,19 @@
  <div id="story"></div>
 
  <script>
-         
-         function makeMadLib () {
-            const buttonMakeMadLib = document.getElementById("lib-button");
-            const inputNoun = document.getElementById("noun").value;
-            const inputAdjective = document.getElementById("adjective").value;
-            const inputName = document.getElementById("person").value;
-            const outputStoryDiv = document.getElementById("story");
 
+         var buttonMakeMadLib = document.getElementById("lib-button");
+         
+         function makeMadLib () {   
+            var inputNoun = document.getElementById("noun").value;
+            var inputAdjective = document.getElementById("adjective").value;
+            var inputName = document.getElementById("person").value;
+            var outputStoryDiv = document.getElementById("story");
 
                 outputStoryDiv.innerHTML = inputName +" "+ "really likes" + " " + inputAdjective + " " + inputNoun;
             }
             
-         buttonMakeMadLib.addEventListener("click", makeMadLib) 
+         buttonMakeMadLib.addEventListener("click", makeMadLib);
 
  </script>
  </body>
