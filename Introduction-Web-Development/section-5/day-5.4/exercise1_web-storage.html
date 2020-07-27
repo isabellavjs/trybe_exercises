@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Page reader</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            body {
+                margin-left: 10px;
+            }
+            #main-title {
+                justify-content: center;
+                font-weight: 200;
+            }
+            .title-formating {
+                justify-content: center;
+                align-items: center;
+                font-style: italic;
+            }
+            .text-formating {
+                justify-content: center;
+                align-items: center;
+                margin-left: 20px;
+            }
+            .content {
+                width: 80%;
+            }
+            p {
+                text-align: justify;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="main-title">Lorem ipsum</h1>
+        <h4 class="title-formating">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... </h4>
+        <h5 class="title-formating">"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.</h5>
+        <section class="user-preferences">
+            <div id="background-color" class="options">
+                <span>Background color</span>
+                <button type="button">white</button>
+                <button type="button">black</button>
+                <button type="button">red</button>
+                <button type="button">blue</button>
+            </div>
+            <div id="font-color" class="options">
+                <span>Font color</span>
+                <button type="button">white</button>
+                <button type="button">black</button>
+                <button type="button">red</button>
+                <button type="button">blue</button>
+            </div>
+            <div id="font-size" class="options">
+                <span>Font size</span>
+                <button type="button">8pt</button>
+                <button type="button">10pt</button>
+                <button type="button">12pt</button>
+                <button type="button">14pt</button>
+                <button type="button">20pt</button>
+            </div>
+            <div id="line-height" class="options">
+                <span>Line spacing</span>
+                <button type="button">1.0</button>
+                <button type="button">normal</button>
+                <button type="button">3.0</button>
+                <button type="button">5.0</button>
+            </div>
+            <div id="font-family" class="options">
+                <span>Font family</span>
+                <button type="button">Arial</button>
+                <button type="button">sans-serif</button>
+            </div>
+        </section>
+
+        <section class="text-formating">
+            <div>
+                <p class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra urna eget nunc aliquet, vel dapibus erat faucibus. Maecenas a interdum tortor. Mauris eu semper tortor, a imperdiet felis. Aliquam id faucibus orci. Nulla rhoncus velit id mollis sagittis. Fusce vitae nibh nisl. Suspendisse in erat imperdiet, vestibulum elit et, tristique magna. Duis ac dolor ex. Vestibulum elementum sit amet neque nec euismod. Suspendisse neque ligula, pharetra nec laoreet at, fringilla vel leo. Phasellus velit eros, pretium et eros sodales, semper eleifend justo. Cras sed ligula ut enim accumsan ultrices. Integer vel neque est. Aliquam molestie eleifend mi non cursus. Nulla non commodo justo.
+                </p>
+                <p class="content">
+                Maecenas viverra ipsum id ante viverra facilisis. Suspendisse quis leo ut leo viverra rutrum. Ut hendrerit consectetur justo, ac lacinia libero porttitor sed. Ut a felis molestie, efficitur eros ac, tempor est. Praesent a sem ligula. Vestibulum quis ipsum velit. Fusce sit amet velit arcu. Vivamus quis feugiat lorem. Vivamus urna purus, egestas elementum sodales et, congue non lacus.
+                </p>
+                <p class="content">
+                Curabitur malesuada leo vel pharetra ornare. Sed dolor libero, volutpat ac accumsan nec, congue vitae mi. Nunc pharetra pulvinar turpis sed interdum. Morbi mollis risus a dui imperdiet aliquam. Nullam congue odio vitae urna laoreet, ut maximus diam sagittis. Pellentesque fermentum diam eget pretium dictum. Etiam eu risus lectus. Praesent gravida cursus ante, a mattis lectus commodo ac. Proin ornare iaculis ipsum a fermentum.
+                </p>
+            </div>
+        </section>
+        <script>
+            window.onload = function() {
+                //Task 1: Change the background color
+                function setBackgroundColor(chosenColor) {
+                    let chosenColor = document.querySelector("body");
+                    chosenColor.style.backgroundColor = chosenColor;
+                    localStorage.setItem("backgroundcolor", chosenColor);
+                }
+            }
+
+            //Task 2: Change the color of the text
+            function setTextColor(textColor) {
+                let paragraphs = document.querySelectorAll(".content");
+                for (let index = 0; index < paragraphs.length; index += 1) {
+                    paragraphs[index].style.color = textColor
+                }
+                
+                localStorage.setItem("text-color", textColor);
+            }
+
+            //Task 3: Change the font size
+            function setFontSize(size) {
+                let fontSizeParagraph = document.querySelectorAll("p");
+                for (let index = 0; index < fontSizeParagraph.length; index += 1) {
+                    fontSizeParagraph[index].style.fontFamily = size
+                }
+                localStorage.setItem("font-size", size);
+
+            }
+
+            //Task 4: Change the line spacing
+            function setLineSpacing(height) {
+                let lineSpaceParagraph = document.querySelectorAll(".content");
+                for (let index = 0; index < lineSpaceParagraph.length; index += 1) {
+                    lineSpaceParagraph[index].style.height = height;
+                }
+                localStorage.setItem("line-space", height);
+            }
+
+            //Task 5: Change the font family
+            function setFontFamily(font) {
+                let chosenFontParagraph = document.querySelectorAll(".content");
+                for (let index = 0; index < chosenFontParagraph.length; index += 1) {
+                    chosenFontParagraph[index].style.fontFamily = font;
+                }
+                localStorage.setItem("font-family", font)
+            }
+
+
+        </script>
+    </body>
+</html>
