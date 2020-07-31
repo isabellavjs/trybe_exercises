@@ -19,11 +19,11 @@ _"Trybe is a school of the future that was founded with the purpose of generatin
 3. Understanding the Internet
 
 ### Section 3: Introduction to HTML & CSS
-1. HTML & CSS: Webpage structure
-2. HTML & CSS: Using CSS
-3. HTML & CSS: Selectors and positioning 
-4. Semantic HTML
-5. Project 01: HTML & CSS
+1. [x] HTML & CSS: Webpage structure
+2. [x] HTML & CSS: Using CSS
+3. [x] HTML & CSS: Selectors and positioning 
+4. [x] Semantic HTML
+5. [x] Project 01: HTML & CSS
 
 ### Section 4: Introduction to JavaScript
 1. First steps JavaScript
@@ -42,3 +42,13 @@ _"Trybe is a school of the future that was founded with the purpose of generatin
 7. Project 05: To-do list
 8. Project 06: Guessing which color (bonus)
 9. Project 07: Mysterious letter (bonus)
+
+## Front-End
+
+### Section 6: Introduction to Front-end
+1. HTML&CSS - Forms
+2. JavaScript Libraries and CSS Frameworks
+3. Introduction - CSS Flexbox (Part I)
+4. CSS FLexbox - Part II
+5. Responsive CSS - Mobile First
+6. Project 08: Facebook initial page
