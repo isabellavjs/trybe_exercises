@@ -19,11 +19,11 @@ _"Trybe is a school of the future that was founded with the purpose of generatin
 3. Understanding the Internet
 
 ### Section 3: Introduction to HTML & CSS
-1. [x] HTML & CSS: Webpage structure
-2. [x] HTML & CSS: Using CSS
-3. [x] HTML & CSS: Selectors and positioning 
-4. [x] Semantic HTML
-5. [x] Project 01: HTML & CSS
+[x] 1.   HTML & CSS: Webpage structure
+[x] 2.   HTML & CSS: Using CSS
+[x] 3.   HTML & CSS: Selectors and positioning 
+[x] 4.   Semantic HTML
+[x] 5.   Project 01: HTML & CSS
 
 ### Section 4: Introduction to JavaScript
 1. First steps JavaScript
