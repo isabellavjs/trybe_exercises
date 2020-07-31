@@ -15,7 +15,6 @@
       <form action="" method="GET" class="">
         <div class="form-row">
       <!--NOME, EMAIL, CPF, ENDEREÇO, CIDADE, ESTADO, TIPO-->
-          <div class="line-content">
             <fieldset>
                 <div class="line-content">
                   <label for="nome">Nome: </label>
@@ -30,7 +29,7 @@
                   <input type="text" name="cpf" id="cpf-numero" required maxlength="11">
                 </div>
                 <div class="line-content">
-                  <label for="endereco"></label>
+                  <label for="endereco">Endereço</label>
                   <input type="text" name="endereco" id="endereco" required maxlength="200">
                 </div>
                 <div class="line-content">
@@ -44,16 +43,36 @@
                   </select>
                 </div>
                 <div class="line-content">
-                  <label for="casa-apartamento"></label>
+                  <label for="casa-apartamento">Tipo de imóvel: </label>
                   <input type="radio" name="casa-apartamento" id="casa" required value="casa"> <span>Casa</span>
                   <input type="radio" name="casa-apartamento" id="apartamento" required value="apartamento"> <span>Apartamento</span>
                 </div>
             </fieldset>
-          </div>
-          
+          <fieldset>
+            <div class="line-content">
+              <label>Resumo do currículo: </label>
+              <textarea required maxlength="1000" cols="100" rows="20" id="curriculo" name="resumo"></textarea>
+            </div>
+            <div class="line-content">
+              <label></label>
+              <input type="text" maxlength="40" required name="cargo" id="cargo">
+            </div>
+            <div class="line-content">
+              <label>Descrição do cargo</label>
+              <input type="text" required id="descricao-cargo" name="descricao-cargo">
+            </div>
+            <div class="line-content">
+              <label>Data de início</label>
+              <input type="date" required id="data" name="data">
+            </div>
+          </fieldset>
+            <div class="botao">
+              <button id="enviar-formulario" name="enviar-formulario">Enviar</button>
+              <button id="limpar" name="limpar">Limpar</button>
+            </div>
+
         </div>
       </form>
-        
         <script src="script.js"></script>
     </body>
 </html>
