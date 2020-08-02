@@ -7,7 +7,7 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-      <header>
+      <header class="formulario-curriculo">
         <h1>Formulário para cadastro de currículo</h1>
         <p>Preencha os campos abaixo.</p>
       </header>
@@ -25,19 +25,19 @@
                   <input type="email" name="email" id="email" required maxlength="50">
                 </div>
                 <div class="line-content">
-                  <label for="cpf-numero">CPF:</label>
+                  <label for="cpf-numero">CPF: </label>
                   <input type="text" name="cpf" id="cpf-numero" required maxlength="11">
                 </div>
                 <div class="line-content">
-                  <label for="endereco">Endereço</label>
+                  <label for="endereco">Endereço: </label>
                   <input type="text" name="endereco" id="endereco" required maxlength="200">
                 </div>
                 <div class="line-content">
-                  <label for="cidade"></label>
+                  <label for="cidade">Cidade: </label>
                   <input type="text" name="cidade" id="cidade" required maxlength="200">
                 </div>
                 <div class="line-content">
-                  <label for="estado"></label>
+                  <label for="estado">Estado: </label>
                   <select name="estado" id="estado">
                   <option value=""></option>
                   </select>
@@ -47,14 +47,14 @@
                   <input type="radio" name="casa-apartamento" id="casa" required value="casa"> <span>Casa</span>
                   <input type="radio" name="casa-apartamento" id="apartamento" required value="apartamento"> <span>Apartamento</span>
                 </div>
-            </fieldset>
+          </fieldset>
           <fieldset>
             <div class="line-content">
               <label>Resumo do currículo: </label>
-              <textarea required maxlength="1000" cols="100" rows="20" id="curriculo" name="resumo"></textarea>
+              <textarea required maxlength="1000" cols="100" rows="20" id="resumo-curriculo" name="resumo-resumo"></textarea>
             </div>
             <div class="line-content">
-              <label></label>
+              <label>Cargo: </label>
               <input type="text" maxlength="40" required name="cargo" id="cargo">
             </div>
             <div class="line-content">
@@ -63,15 +63,14 @@
             </div>
             <div class="line-content">
               <label>Data de início</label>
-              <input type="date" required id="data" name="data">
+              <input type="text" required id="data" name="data">
             </div>
           </fieldset>
             <div class="botao">
               <button id="enviar-formulario" name="enviar-formulario">Enviar</button>
-              <button id="limpar" name="limpar">Limpar</button>
             </div>
-
-        </div>
+            <div class="dados-formulario"></div>
+              <button id="limpar" name="limpar">Limpar</button>
       </form>
         <script src="script.js"></script>
     </body>
