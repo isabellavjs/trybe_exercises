@@ -12,3 +12,19 @@ function createListState() {
     }
 }
 createListState();
+
+//Check date format
+const dataInput = document.getElementById('data');
+function checkData() {
+    if (dataInput.value.indexOf('/') === 2 && dataInput.value.indexOf('/') === 5) {
+       let day = dataInput.value.substr(0,2);
+       let month = dataInput.value.substr(3,2);
+       let year = dataInput.value.substr(6,4);
+       if ((day > 0 && day <31) && (month > 0 && month <= 12) && (month > 0)) {
+           return true;
+       } else {
+           return false;
+       }
+    }
+}
+checkData();
