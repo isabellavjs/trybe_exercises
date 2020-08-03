@@ -25,3 +25,19 @@ function checkData() {
        } 
     }
 console.log(checkData())
+
+//Save data in a section, and add in a div when submit botton is clicked
+function renderCurriculum(event) {
+    const formElements = document.getElementById('form-curriculum').elements;
+
+    for (let index = 0; index < formElements.length; index += 1) {
+        if (formElements[index].tagName !== 'fieldset') {
+            document.getElementById('render-curriculum').innerHTML += '<div>' + formElements[index].value + '</div>';
+        }
+    }
+}
+renderCurriculum();
+
+//Submit button
+const enviarButton = document.getElementById('enviar-formulario');
+enviarButton.addEventListener('click', renderCurriculum());
