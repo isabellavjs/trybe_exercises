@@ -24,7 +24,7 @@ function checkData() {
        } 
        } 
     }
-//console.log(checkData())
+console.log(checkData())
 
 //Save data in a section, and add in a div when submit botton is clicked
 function renderCurriculum(event) {
@@ -32,7 +32,7 @@ function renderCurriculum(event) {
 
     for (let index = 0; index < formElements.length; index += 1) {
         if (formElements[index].tagName !== 'fieldset') {
-            //document.getElementById('render-curriculum').innerHTML += '<div>' + formElements[index].value + '</div>';
+            document.getElementById('render-curriculum').innerHTML += '<div>' + formElements[index].value + '</div>';
         }
     }
 }
