@@ -5,57 +5,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario-curriculo</title>
+  <link href="css/bulma.min.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <header>
-    <h1>Formulário para cadastro de currículo</h1>
-    <p>Preencha os campos abaixo.</p>
+    <h1 class="title">Formulário para cadastro de currículo</h1>
+    <p class="subtitle">Preencha os campos abaixo.</p>
   </header>
   <!--Formulario-->
   <form action="" method="GET" id="form-curriculum">
     <!--NOME, EMAIL, CPF, ENDEREÇO, CIDADE, ESTADO, TIPO-->
-    <label for="nome">Nome: </label>
-    <input type="text" name="nome" id="nome" maxlength="40" required>
+    <div class="field">
+      <label class="label" for="nome">Nome: </label>
+      <div class="control">
+        <input class="input" type="text" name="nome" id="nome" maxlength="40" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="email">Endereço de e-mail: </label>
+      <div class="control">
+        <input class="input" type="email" name="email" id="email" maxlength="50" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="cpf-numero">CPF: </label>
+      <div class="control">
+        <input class="input" type="text" name="cpf" id="cpf-numero" maxlength="11" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="endereco">Endereço: </label>
+      <div class="control">
+        <input class="input" type="text" name="endereco" id="endereco" maxlength="200" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="cidade">Cidade: </label>
+      <div class="control">
+        <input class="input" type="text" name="cidade" id="cidade" maxlength="200" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="estado">Estado: </label>
+      <div class="control">
+        <select class="select" name="estado" id="estado" value="" required>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="casa-apartamento">Tipo de imóvel: </label>
+      <div class="control">
+        <input class="radio" type="radio" name="casa-apartamento" id="casa" value="casa" required> <span class="content is-medium">Casa</span>
+        <input class="radio" type="radio" name="casa-apartamento" id="apartamento" value="apartamento" required>
+        <span class="content is-medium">Apartamento</span>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Resumo do currículo: </label>
+      <div class="control">
+        <textarea class="textarea" id="resumo-curriculo" name="resumo-resumo" maxlength="1000" cols="100" rows="20"
+          required></textarea>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Cargo: </label>
+      <div class="control">
+        <input class="input" type="text" name="cargo" id="cargo" maxlength="40" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Descrição do cargo: </label>
+      <div class="control">
+        <input class="input" type="text" id="descricao-cargo" name="descricao-cargo" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Data de início: </label>
+      <div class="control">
+        <input class="input" type="text" id="data" name="data" value="" required>
+      </div>
+    </div>
 
-    <label for="email">Endereço de e-mail: </label>
-    <input type="email" name="email" id="email" maxlength="50" required>
+    <button class="button is-success is-primary" type="button" id="enviar-formulario" name="enviar-formulario">Enviar</button>
 
-    <label for="cpf-numero">CPF: </label>
-    <input type="text" name="cpf" id="cpf-numero" maxlength="11" required>
-
-    <label for="endereco">Endereço: </label>
-    <input type="text" name="endereco" id="endereco" maxlength="200" required>
-
-
-    <label for="cidade">Cidade: </label>
-    <input type="text" name="cidade" id="cidade" maxlength="200" required>
-
-    <label for="estado">Estado: </label>
-    <select name="estado" id="estado" value="" required>
-    </select>
-
-    <label for="casa-apartamento">Tipo de imóvel: </label>
-    <input type="radio" name="casa-apartamento" id="casa" value="casa" required> <span>Casa</span>
-    <input type="radio" name="casa-apartamento" id="apartamento" value="apartamento" required>
-    <span>Apartamento</span>
-
-    <label>Resumo do currículo: </label>
-    <textarea id="resumo-curriculo" name="resumo-resumo" maxlength="1000" cols="100" rows="20"
-      required></textarea></textarea>
-
-    <label>Cargo: </label>
-    <input type="text" name="cargo" id="cargo" maxlength="40" required>
-
-    <label>Descrição do cargo: </label>
-    <input type="text" id="descricao-cargo" name="descricao-cargo" required>
-
-    <label>Data de início: </label>
-    <input type="text" id="data" name="data" value="" required>
-
-    <button type="button" id="enviar-formulario" name="enviar-formulario">Enviar</button>
-
-    <button id="limpar" name="limpar">Limpar</button>
+    <button class="button is-danger is-primary" id="limpar" name="limpar">Limpar</button>
   </form>
   <section class="render-curriculum"></section>
   <script src="script.js"></script>
