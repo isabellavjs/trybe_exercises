@@ -5,10 +5,9 @@ let value = 1;
 //Create the options to select
 function createListState() {
     for (let index = 0; index < opcoesEstados.length; index += 1) {
-        let createOptions = document.createElement('option');
-        createOptions.value = value;
-        createOptions.innerHTML = opcoesEstados[index];
-        estados.appendChild(createOptions);
+        const createOptions = document.createElement('option');
+        estados.appendChild(createOptions).innerText = opcoesEstados[index];
+        estados.appendChild(createOptions).value = opcoesEstados[index];
     }
 }
 createListState();
@@ -20,11 +19,9 @@ function checkData() {
        let day = dataInput.value.substr(0,2);
        let month = dataInput.value.substr(3,2);
        let year = dataInput.value.substr(6,4);
-       if ((day > 0 && day <31) && (month > 0 && month <= 12) && (month > 0)) {
+       if ((day > 0 && day <31) && (month > 0 && month <= 12) && (year > 0 && year.length === 4)) {
            return true;
-       } else {
-           return false;
-       }
+       } 
+       } 
     }
-}
-checkData();
+console.log(checkData())
