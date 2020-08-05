@@ -25,19 +25,49 @@ window.onload = function() {
         },
         cidade: {
           required: true
-        }
+        },
+        estado: {
+          required: true
+        },
+        resumoCurriculo: {
+          required: true
+        },
+        descricaoCargo: {
+          required: true
+        },
+        cargo: {
+          required: true
+        },
+        data: {
+          required: true
+        },
       },
       messages: {
         name: {
           required: 'Campo obrigatório.'
         },
         email: {
-          required: 'Campo obrigatório',
-          email: 'Endereço inválido'
+          required: 'Campo obrigatório.',
+          email: 'Endereço inválido.'
         },
         cpf: {
-          required: 'Campo obrigatório'
-        }, 
+          required: 'Campo obrigatório.'
+        },
+        estado: {
+          required: 'Campo obrigatório.'
+        },
+        resumoCurriculo: {
+          required: 'Campo obrigatório.'
+        },
+        descricaoCargo: {
+          required: 'Campo obrigatório.'
+        },
+        cargo: {
+          required: 'Campo obrigatório.'
+        },
+        data: {
+          required: 'Campo obrigatório.'
+        } 
       },
       submitHandler: function (form, values) {
         console.log(form, values)
