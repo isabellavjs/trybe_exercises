@@ -26,6 +26,14 @@ function checkData() {
     }
 //console.log(checkData())
 
+//Check e-mail
+const email = document.getElementById('email');
+function checkEmail(){
+    let regexEmail = /[a-zA-Z0-9._-]+@[A-Z0-9.-]+\.[a-z]{2,}$/;
+    return regexEmail.test(email.value);
+}
+console.log(checkEmail);
+
 //Save data in a section, and add in a div when submit botton is clicked
 function renderCurriculum(event) {
     const formElements = document.getElementById('form-curriculum').elements;
