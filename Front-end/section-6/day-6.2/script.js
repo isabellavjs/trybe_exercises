@@ -1,3 +1,8 @@
+//Initialize datepicker
+window.onload = function() {
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+}
+
 //Options to select the state
 const estados = document.getElementById('estado');
 const opcoesEstados = ['Selecione seu estado', 'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
