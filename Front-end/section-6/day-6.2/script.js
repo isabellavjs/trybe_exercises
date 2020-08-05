@@ -1,6 +1,37 @@
-//Initialize datepicker
+//Initialize datepicker and justValidate
 window.onload = function() {
-    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+
+    var picker = new Pikaday({ 
+        field: document.getElementById('datepicker'),
+        onSelect: function(date) {
+            console.log(date);
+        }
+    });
+
+    new JustValidate('.curriculum-form', {
+      rules: {
+        name: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+      },
+      messages: {
+        name: {
+          required: 'Campo obrigatório.'
+        },
+        email: {
+          required: 'Campo obrigatório',
+          email: 'Endereço inválido'
+        }, 
+      },
+      submitHandler: function (form, values) {
+        console.log(form, values)
+      },
+    });
+
 }
 
 //Options to select the state
@@ -17,31 +48,16 @@ function createListState() {
 }
 createListState();
 
-//Check date format
-const dataInput = document.getElementById('data');
-function checkData() {
-    if (dataInput.value.indexOf('/') === 2 && dataInput.value.indexOf('/') === 5) {
-       let day = dataInput.value.substr(0,2);
-       let month = dataInput.value.substr(3,2);
-       let year = dataInput.value.substr(6,4);
-       if ((day > 0 && day <31) && (month > 0 && month <= 12) && (year > 0 && year.length === 4)) {
-           return true;
-       } 
-       } 
-    }
-console.log(checkData())
-
 //Save data in a section, and add in a div when submit botton is clicked
 function renderCurriculum(event) {
     const formElements = document.getElementById('form-curriculum').elements;
 
     for (let index = 0; index < formElements.length; index += 1) {
-        if (formElements[index].tagName !== 'fieldset') {
+        if (formElements[index].className === 'field') {
             document.getElementById('render-curriculum').innerHTML += '<div>' + formElements[index].value + '</div>';
         }
     }
 }
-renderCurriculum();
 
 //Submit button
 const enviarButton = document.getElementById('enviar-formulario');

@@ -16,18 +16,18 @@
     <p class="subtitle">Preencha os campos abaixo.</p>
   </header>
   <!--Formulario-->
-  <form action="" method="GET" id="form-curriculum">
+  <form action="" method="GET" id="form-curriculum" class="curriculum-form">
     <!--NOME, EMAIL, CPF, ENDEREÇO, CIDADE, ESTADO, TIPO-->
     <div class="field">
       <label class="label" for="nome">Nome: </label>
       <div class="control">
-        <input class="input" type="text" name="nome" id="nome" maxlength="40" required>
+        <input class="input" type="text" name="name" id="name" maxlength="40" data-validate-field="name" required>
       </div>
     </div>
     <div class="field">
       <label class="label" for="email">Endereço de e-mail: </label>
       <div class="control">
-        <input class="input" type="email" name="email" id="email" maxlength="50" required>
+        <input class="input" type="email" name="email" id="email" data-validate-field="email" maxlength="50" required>
       </div>
     </div>
     <div class="field">
@@ -91,8 +91,10 @@
 
     <button class="button is-success is-primary" type="button" id="enviar-formulario" name="enviar-formulario">Enviar</button>
     <button class="button is-danger is-primary" id="limpar" name="limpar">Limpar</button>
+
   </form>
   <section class="render-curriculum"></section>
+  <script src="js/justvalidate.js"></script>
   <script src="js/pikaday.js"></script>
   <script src="script.js"></script>
 </body>
