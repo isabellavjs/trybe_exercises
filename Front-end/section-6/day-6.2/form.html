@@ -33,25 +33,25 @@
     <div class="field">
       <label class="label" for="cpf-numero">CPF: </label>
       <div class="control">
-        <input class="input" type="text" name="cpf" id="cpf-numero" maxlength="11" required>
+        <input class="input" type="text" name="cpf" id="cpf-numero" data-validate-field="cpf" maxlength="11" required>
       </div>
     </div>
     <div class="field">
       <label class="label" for="endereco">Endereço: </label>
       <div class="control">
-        <input class="input" type="text" name="endereco" id="endereco" maxlength="200" required>
+        <input class="input" type="text" name="endereco" id="endereco" data-validate-field="endereco" maxlength="200" required>
       </div>
     </div>
     <div class="field">
       <label class="label" for="cidade">Cidade: </label>
       <div class="control">
-        <input class="input" type="text" name="cidade" id="cidade" maxlength="200" required>
+        <input class="input" type="text" name="cidade" id="cidade" data-validate-field="cidade" maxlength="200" required>
       </div>
     </div>
     <div class="field">
       <label class="label" for="estado">Estado: </label>
       <div class="control">
-        <select class="select" name="estado" id="estado" value="" required>
+        <select class="select" name="estado" id="estado" value="" data-validate-field="estado" required>
         </select>
       </div>
     </div>
@@ -66,7 +66,7 @@
     <div class="field">
       <label class="label">Resumo do currículo: </label>
       <div class="control">
-        <textarea class="textarea" id="resumo-curriculo" name="resumo-resumo" maxlength="1000" cols="100" rows="20"
+        <textarea class="textarea" id="resumoCurriculo" name="resumoCurriculo" data-validate-field="resumoCurriculo" maxlength="1000" cols="100" rows="20"
           required></textarea>
       </div>
     </div>
@@ -79,7 +79,7 @@
     <div class="field">
       <label class="label">Descrição do cargo: </label>
       <div class="control">
-        <input class="input" type="text" id="descricao-cargo" name="descricao-cargo" required>
+        <input class="input" type="text" id="descricaoCargo" name="descricaoCargo" data-validate-field="descricaoCargo" required>
       </div>
     </div>
     <div class="field" for="data">

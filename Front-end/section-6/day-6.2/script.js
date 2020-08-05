@@ -17,6 +17,15 @@ window.onload = function() {
           required: true,
           email: true
         },
+        cpf: {
+          required: true
+        },
+        endereco: {
+          required: true
+        },
+        cidade: {
+          required: true
+        }
       },
       messages: {
         name: {
@@ -25,6 +34,9 @@ window.onload = function() {
         email: {
           required: 'Campo obrigatório',
           email: 'Endereço inválido'
+        },
+        cpf: {
+          required: 'Campo obrigatório'
         }, 
       },
       submitHandler: function (form, values) {
