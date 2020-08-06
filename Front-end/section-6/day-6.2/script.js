@@ -64,8 +64,6 @@ window.onload = function() {
     }
     });
 
-  //enviarButton.addEventListener('click', JustValidate());
-
     new JustValidate('.curriculum-form', {
       rules: {
         name: {
