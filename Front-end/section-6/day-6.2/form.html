@@ -21,21 +21,21 @@
     <div class="field">
       <label class="label" for="nome">Nome: </label>
       <div class="control">
-        <input class="input" type="text" name="name" id="name" maxlength="40" data-validate-field="name" required>
+        <input class="input" type="text" name="name" id="name" maxlength="40" data-validate-field="name" autocomplete="off" placeholder="Nome" required>
       </div>
     </div>
     <!--EMAIL-->
     <div class="field">
       <label class="label" for="email">Endereço de e-mail: </label>
       <div class="control">
-        <input class="input" type="email" name="email" id="email" data-validate-field="email" maxlength="50" required>
+        <input class="input" type="email" name="email" id="email" data-validate-field="email" maxlength="50" autocomplete="off" placeholder="E-mail" required>
       </div>
     </div>
     <!--CPF-->
     <div class="field">
       <label class="label" for="cpf-numero">CPF: </label>
       <div class="control">
-        <input class="input" type="text" name="cpf" id="cpf-numero" data-validate-field="cpf" maxlength="11" required>
+        <input class="input" type="text" name="cpf" id="cpf-numero" data-validate-field="cpf" maxlength="11" autocomplete="off" placeholder="CPF" required>
       </div>
     </div>
     <!--ENDEREÇO-->
@@ -95,15 +95,16 @@
     <div class="field" for="data">
       <label class="label">Data de início: </label>
       <div class="control">
-        <input class="input" type="text" id="datepicker" name="data" data-validate-field="data" required>
+        <input class="input" type="text" id="datepicker" name="data" data-validate-field="data" placeholder="DD/MM/YYYY" required>
       </div>
     </div>
-    <!--BOTÕES ENVIAR E LIMPAR FORMULÁRIO-->
+  </form>
+  <!--BOTÕES ENVIAR E LIMPAR FORMULÁRIO-->
+  <section>
     <button class="button is-success is-primary" type="submit" id="enviar-formulario" name="enviar-formulario">Enviar</button>
     <button class="button is-danger is-primary" id="limpar" name="limpar">Limpar</button>
-  </form>
-  <!--SALVAR AS INFORMAÇÕES DO FORM-->
-  <section class="render-curriculum"></section>
+  </section>
+
   <script src="js/justvalidate.js"></script>
   <script src="js/pikaday.js"></script>
   <script src="script.js"></script>
