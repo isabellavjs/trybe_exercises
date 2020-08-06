@@ -32,3 +32,12 @@ figure {
         margin-bottom: 30px;
     }
 }
+@media screen and (min-width: 900px) {
+    body {
+        background: grey;
+        font-size: 25px;
+        margin: 20px;
+        max-width: 800px;
+        line-height: 35px;
+    }
+}
