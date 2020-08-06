@@ -6,18 +6,65 @@ const enviarButton = document.getElementById('enviar-formulario');
 const clearButton = document.getElementById('limpar');
 const radioOptions = document.getElementsByName('casa-apartamento');
 
+//Criar opçoes para selecionar o estado
+let value = 1;
+
+function createListState() {
+    for (let index = 0; index < opcoesEstados.length; index += 1) {
+        const createOptions = document.createElement('option');
+        estados.appendChild(createOptions).innerText = opcoesEstados[index];
+        estados.appendChild(createOptions).value = opcoesEstados[index];
+    }
+}
+
+//Interromper o fluxo automático
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  userAnswer();
+})
+
+//Armazenar os dados em uma div ao clicar em enviar
+function userAnswer() {
+  const elementsForm = document.getElementById('form-curriculum').elements;
+  const divAnswer = document.querySelector('#dados-user');
+ 
+  for (let index = 0; index < elementsForm.length; index += 1) {
+    if (elementsForm[index].tagName !== 'button') { 
+      console.log(elementsForm[index].value);
+      let userDados = document.createElement('p');
+     
+      if (elementsForm[index].tagName === 'input' && elementsForm[index].type === 'radio' && elementsForm[index].checked) {
+      const radioValues = {"casa": "Casa", "apartamento": "Apartamento"}
+      userDados.innerHTML += radioValues[elementsForm[index].value];
+      } else {
+      if (elementsForm[index].tagName === 'input' && elementsForm[index].type === 'radio') {
+        userDados.innerHTML += elementsForm[index].value;
+      }
+      }
+      if (elementsForm.tagName === 'select' || elementsForm.tagName === 'textarea') {
+      userDados.innerHTML += elementsForm[index].value;
+      }
+    divAnswer.appendChild(userDados);
+    }
+  }
+}
+
+//Limpar dados
+clearButton.addEventListener('click', function() {
+  form.reset() 
+})
+
 //Datepicker and justValidate
 window.onload = function() {
   createListState();
 
-  var picker = new Pikaday({ 
-    field: document.getElementById('datepicker'),
+  var picker = new Pikaday({ field: document.getElementById('datepicker') ,
     onSelect: function(date) {
     console.log(date);
     }
     });
 
-  enviarButton.addEventListener('click', JustValidate());
+  //enviarButton.addEventListener('click', JustValidate());
 
     new JustValidate('.curriculum-form', {
       rules: {
@@ -81,69 +128,10 @@ window.onload = function() {
         } 
       },
       submitHandler: function (form, values) {
-        console.log(form, values)
+        console.log(form, values);
+        userAnswer();
       },
     });
 }
 
-//Criar opçoes para selecionar o estado
-let value = 1;
-
-function createListState() {
-    for (let index = 0; index < opcoesEstados.length; index += 1) {
-        const createOptions = document.createElement('option');
-        estados.appendChild(createOptions).innerText = opcoesEstados[index];
-        estados.appendChild(createOptions).value = opcoesEstados[index];
-    }
-}
-
-//Interromper o fluxo automático
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  userAnswer();
-})
-
-//Armazenar os dados em uma div ao clicar em enviar
-function userAnswer() {
-  let userInfo = document.createElement('div');
-  userInfo.id = 'answer';
-  const section = document.querySelector('section');
-  section.appendChild(userInfo);
-  const divAnswer = document.querySelector('#answer');
-
-  for (let index = 0; index < form.length; index += 1) {
-    if (index < 6 || index > 7) { //Seleciona todos os inputs do usuário, exceto o tipo radio.
-      const userInfo = document.createElement('p');
-      userInfo.innerHTML = form[index].value;
-      divAnswer.appendChild(userInfo);
-    } 
-    else if (index === 6) {
-      let radioValue;
-      if (radioOptions[0].checked) {
-        radioValue = radioOptions[0].value;
-      const userInfo = document.createElement('p');
-      userInfo.innerHTML = radioValue;
-      divAnswer.appendChild(userInfo);
-      } else {
-        false;
-      }
-    }
-    else if (index === 7) {
-      let radioValue;
-      if (radioOptions[1].checked) {
-        radioValue = radioOptions[1].value;
-      const userInfo = document.createElement('p');
-      userInfo.innerHTML = radioValue;
-      divAnswer.appendChild(userInfo);
-      } else {
-        false;
-      }
-    }
-  }
-}
-
-//Limpar dados
-clearButton.addEventListener('click', function() {
-  form.reset() 
-})
 
