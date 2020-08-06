@@ -76,11 +76,11 @@ window.onload = function() {
 
 }
 
-//Options to select the state
+//Options para a combobox
 const estados = document.getElementById('estado');
 const opcoesEstados = ['Selecione seu estado', 'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
 let value = 1;
-//Create the options to select
+//Criar opçoes para selecionar o estado
 function createListState() {
     for (let index = 0; index < opcoesEstados.length; index += 1) {
         const createOptions = document.createElement('option');
@@ -92,13 +92,13 @@ createListState();
 
 //Save data in a section, and add in a div when submit botton is clicked
 function renderCurriculum(event) {
-    const formElements = document.getElementById('form-curriculum').elements;
+    const formElements = document.getElementById('form-curriculum').values;
 
-    for (let index = 0; index < formElements.length; index += 1) {
-        if (formElements[index].className === 'field') {
-            document.getElementById('render-curriculum').innerHTML += '<div>' + formElements[index].value + '</div>';
+    //for (let index = 0; index < formElements.length; index += 1) {
+        if (formElements !== null) {
+            document.getElementById('render-curriculum').innerHTML += '<div>' + values + '</div>';
         }
-    }
+    //}
 }
 
 //Submit button

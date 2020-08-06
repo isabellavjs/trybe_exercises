@@ -17,37 +17,42 @@
   </header>
   <!--Formulario-->
   <form action="" method="GET" id="form-curriculum" class="curriculum-form">
-    <!--NOME, EMAIL, CPF, ENDEREÇO, CIDADE, ESTADO, TIPO-->
+    <!--NOME-->
     <div class="field">
       <label class="label" for="nome">Nome: </label>
       <div class="control">
         <input class="input" type="text" name="name" id="name" maxlength="40" data-validate-field="name" required>
       </div>
     </div>
+    <!--EMAIL-->
     <div class="field">
       <label class="label" for="email">Endereço de e-mail: </label>
       <div class="control">
         <input class="input" type="email" name="email" id="email" data-validate-field="email" maxlength="50" required>
       </div>
     </div>
+    <!--CPF-->
     <div class="field">
       <label class="label" for="cpf-numero">CPF: </label>
       <div class="control">
         <input class="input" type="text" name="cpf" id="cpf-numero" data-validate-field="cpf" maxlength="11" required>
       </div>
     </div>
+    <!--ENDEREÇO-->
     <div class="field">
       <label class="label" for="endereco">Endereço: </label>
       <div class="control">
         <input class="input" type="text" name="endereco" id="endereco" data-validate-field="endereco" maxlength="200" required>
       </div>
     </div>
+    <!--CIDADE-->
     <div class="field">
       <label class="label" for="cidade">Cidade: </label>
       <div class="control">
         <input class="input" type="text" name="cidade" id="cidade" data-validate-field="cidade" maxlength="200" required>
       </div>
     </div>
+    <!--ESTADO-->
     <div class="field">
       <label class="label" for="estado">Estado: </label>
       <div class="control">
@@ -55,6 +60,7 @@
         </select>
       </div>
     </div>
+    <!--IMÓVEL-->
     <div class="field">
       <label class="label" for="casa-apartamento">Tipo de imóvel: </label>
       <div class="control">
@@ -63,6 +69,7 @@
         <span class="content is-medium">Apartamento</span>
       </div>
     </div>
+    <!--RESUMO CV-->
     <div class="field">
       <label class="label">Resumo do currículo: </label>
       <div class="control">
@@ -70,29 +77,32 @@
           required></textarea>
       </div>
     </div>
+    <!--CARGO-->
     <div class="field">
       <label class="label">Cargo: </label>
       <div class="control">
         <input class="input" type="text" name="cargo" id="cargo" maxlength="40" data-validate-field="cargo" required>
       </div>
     </div>
+    <!--DESCRIÇÃO DO CARGO-->
     <div class="field">
       <label class="label">Descrição do cargo: </label>
       <div class="control">
         <input class="input" type="text" id="descricaoCargo" name="descricaoCargo" data-validate-field="descricaoCargo" required>
       </div>
     </div>
+    <!--DATA DE INÍCIO-->
     <div class="field" for="data">
       <label class="label">Data de início: </label>
       <div class="control">
         <input class="input" type="text" id="datepicker" name="data" data-validate-field="data" required>
       </div>
     </div>
-
+    <!--BOTÕES ENVIAR E LIMPAR FORMULÁRIO-->
     <button class="button is-success is-primary" type="submit" id="enviar-formulario" name="enviar-formulario">Enviar</button>
     <button class="button is-danger is-primary" id="limpar" name="limpar">Limpar</button>
-
   </form>
+  <!--SALVAR AS INFORMAÇÕES DO FORM-->
   <section class="render-curriculum"></section>
   <script src="js/justvalidate.js"></script>
   <script src="js/pikaday.js"></script>
