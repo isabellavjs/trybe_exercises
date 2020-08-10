@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario-curriculo</title>
   <link href="css/bulma.min.css" rel="stylesheet" type="text/css">
+  <link href="css/pikaday.css" rel="stylesheet" type="text/css">
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -15,45 +16,51 @@
     <p class="subtitle">Preencha os campos abaixo.</p>
   </header>
   <!--Formulario-->
-  <form action="" method="GET" id="form-curriculum">
-    <!--NOME, EMAIL, CPF, ENDEREÇO, CIDADE, ESTADO, TIPO-->
+  <form action="" method="GET" id="form-curriculum" class="curriculum-form">
+    <!--NOME-->
     <div class="field">
       <label class="label" for="nome">Nome: </label>
       <div class="control">
-        <input class="input" type="text" name="nome" id="nome" maxlength="40" required>
+        <input class="input" type="text" name="name" id="name" maxlength="40" data-validate-field="name" autocomplete="off" placeholder="Nome" required>
       </div>
     </div>
+    <!--EMAIL-->
     <div class="field">
       <label class="label" for="email">Endereço de e-mail: </label>
       <div class="control">
-        <input class="input" type="email" name="email" id="email" maxlength="50" required>
+        <input class="input" type="email" name="email" id="email" data-validate-field="email" maxlength="50" autocomplete="off" placeholder="E-mail" required>
       </div>
     </div>
+    <!--CPF-->
     <div class="field">
       <label class="label" for="cpf-numero">CPF: </label>
       <div class="control">
-        <input class="input" type="text" name="cpf" id="cpf-numero" maxlength="11" required>
+        <input class="input" type="text" name="cpf" id="cpf-numero" data-validate-field="cpf" maxlength="11" autocomplete="off" placeholder="CPF" required>
       </div>
     </div>
+    <!--ENDEREÇO-->
     <div class="field">
       <label class="label" for="endereco">Endereço: </label>
       <div class="control">
-        <input class="input" type="text" name="endereco" id="endereco" maxlength="200" required>
+        <input class="input" type="text" name="endereco" id="endereco" data-validate-field="endereco" maxlength="200" required>
       </div>
     </div>
+    <!--CIDADE-->
     <div class="field">
       <label class="label" for="cidade">Cidade: </label>
       <div class="control">
-        <input class="input" type="text" name="cidade" id="cidade" maxlength="200" required>
+        <input class="input" type="text" name="cidade" id="cidade" data-validate-field="cidade" maxlength="200" required>
       </div>
     </div>
+    <!--ESTADO-->
     <div class="field">
       <label class="label" for="estado">Estado: </label>
       <div class="control">
-        <select class="select" name="estado" id="estado" value="" required>
+        <select class="select" name="estado" id="estado" value="" data-validate-field="estado" required>
         </select>
       </div>
     </div>
+    <!--IMÓVEL-->
     <div class="field">
       <label class="label" for="casa-apartamento">Tipo de imóvel: </label>
       <div class="control">
@@ -62,37 +69,45 @@
         <span class="content is-medium">Apartamento</span>
       </div>
     </div>
+    <!--RESUMO CV-->
     <div class="field">
       <label class="label">Resumo do currículo: </label>
       <div class="control">
-        <textarea class="textarea" id="resumo-curriculo" name="resumo-resumo" maxlength="1000" cols="100" rows="20"
+        <textarea class="textarea" id="resumoCurriculo" name="resumoCurriculo" data-validate-field="resumoCurriculo" maxlength="1000" cols="100" rows="20"
           required></textarea>
       </div>
     </div>
+    <!--CARGO-->
     <div class="field">
       <label class="label">Cargo: </label>
       <div class="control">
-        <input class="input" type="text" name="cargo" id="cargo" maxlength="40" required>
+        <input class="input" type="text" name="cargo" id="cargo" maxlength="40" data-validate-field="cargo" required>
       </div>
     </div>
+    <!--DESCRIÇÃO DO CARGO-->
     <div class="field">
       <label class="label">Descrição do cargo: </label>
       <div class="control">
-        <input class="input" type="text" id="descricao-cargo" name="descricao-cargo" required>
+        <input class="input" type="text" id="descricaoCargo" name="descricaoCargo" data-validate-field="descricaoCargo" required>
       </div>
     </div>
-    <div class="field">
+    <!--DATA DE INÍCIO-->
+    <div class="field" for="data">
       <label class="label">Data de início: </label>
       <div class="control">
-        <input class="input" type="text" id="data" name="data" value="" required>
+        <input class="input" type="text" id="datepicker" name="data" data-validate-field="data" placeholder="DD/MM/YYYY" required>
       </div>
     </div>
-
-    <button class="button is-success is-primary" type="button" id="enviar-formulario" name="enviar-formulario">Enviar</button>
-
-    <button class="button is-danger is-primary" id="limpar" name="limpar">Limpar</button>
+    <!--BOTÕES ENVIAR E LIMPAR FORMULÁRIO-->
+    <button class="button is-success is-primary" type="submit" id="enviar-formulario" name="enviar-formulario">Enviar</button>
+    <input type="reset" class="is-primary is-danger" id="limpar" name="limpar">
+    <!--SALVAR DADOS DO USUÁRIO-->
+    <section id="dados-user">
+    </section>
   </form>
-  <section class="render-curriculum"></section>
+
+  <script src="js/justvalidate.js"></script>
+  <script src="js/pikaday.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

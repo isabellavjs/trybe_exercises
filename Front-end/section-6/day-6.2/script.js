@@ -1,8 +1,14 @@
-//Options to select the state
+//Variáveis
+const form = document.getElementById('form-curriculum');
 const estados = document.getElementById('estado');
 const opcoesEstados = ['Selecione seu estado', 'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
+const enviarButton = document.getElementById('enviar-formulario');
+const clearButton = document.getElementById('limpar');
+const radioOptions = document.getElementsByName('casa-apartamento');
+
+//Criar opçoes para selecionar o estado
 let value = 1;
-//Create the options to select
+
 function createListState() {
     for (let index = 0; index < opcoesEstados.length; index += 1) {
         const createOptions = document.createElement('option');
@@ -10,34 +16,120 @@ function createListState() {
         estados.appendChild(createOptions).value = opcoesEstados[index];
     }
 }
-createListState();
 
-//Check date format
-const dataInput = document.getElementById('data');
-function checkData() {
-    if (dataInput.value.indexOf('/') === 2 && dataInput.value.indexOf('/') === 5) {
-       let day = dataInput.value.substr(0,2);
-       let month = dataInput.value.substr(3,2);
-       let year = dataInput.value.substr(6,4);
-       if ((day > 0 && day <31) && (month > 0 && month <= 12) && (year > 0 && year.length === 4)) {
-           return true;
-       } 
-       } 
+//Interromper o fluxo automático
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  userAnswer();
+})
+
+//Armazenar os dados em uma div ao clicar em enviar
+function userAnswer() {
+  const elementsForm = document.getElementById('form-curriculum').elements;
+  const divAnswer = document.querySelector('#dados-user');
+ 
+  for (let index = 0; index < elementsForm.length; index += 1) {
+    if (elementsForm[index].tagName !== 'button') { 
+      console.log(elementsForm[index].value);
+      let userDados = document.createElement('p');
+     
+      if (elementsForm[index].tagName === 'input' && elementsForm[index].type === 'radio' && elementsForm[index].checked) {
+      const radioValues = {"casa": "Casa", "apartamento": "Apartamento"}
+      userDados.innerHTML += radioValues[elementsForm[index].value];
+      } else {
+      if (elementsForm[index].tagName === 'input' && elementsForm[index].type === 'radio') {
+        userDados.innerHTML += elementsForm[index].value;
+      }
+      }
+      if (elementsForm.tagName === 'select' || elementsForm.tagName === 'textarea') {
+      userDados.innerHTML += elementsForm[index].value;
+      }
+    divAnswer.appendChild(userDados);
     }
-console.log(checkData())
-
-//Save data in a section, and add in a div when submit botton is clicked
-function renderCurriculum(event) {
-    const formElements = document.getElementById('form-curriculum').elements;
-
-    for (let index = 0; index < formElements.length; index += 1) {
-        if (formElements[index].tagName !== 'fieldset') {
-            document.getElementById('render-curriculum').innerHTML += '<div>' + formElements[index].value + '</div>';
-        }
-    }
+  }
 }
-renderCurriculum();
 
-//Submit button
-const enviarButton = document.getElementById('enviar-formulario');
-enviarButton.addEventListener('click', renderCurriculum());
+//Limpar dados
+clearButton.addEventListener('click', function() {
+  form.reset() 
+})
+
+//Datepicker and justValidate
+window.onload = function() {
+  createListState();
+
+  var picker = new Pikaday({ field: document.getElementById('datepicker') ,
+    onSelect: function(date) {
+    console.log(date);
+    }
+    });
+
+    new JustValidate('.curriculum-form', {
+      rules: {
+        name: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        cpf: {
+          required: true
+        },
+        endereco: {
+          required: true
+        },
+        cidade: {
+          required: true
+        },
+        estado: {
+          required: true
+        },
+        resumoCurriculo: {
+          required: true
+        },
+        descricaoCargo: {
+          required: true
+        },
+        cargo: {
+          required: true
+        },
+        data: {
+          required: true
+        },
+      },
+      messages: {
+        name: {
+          required: 'Campo obrigatório.'
+        },
+        email: {
+          required: 'Campo obrigatório.',
+          email: 'Endereço inválido.'
+        },
+        cpf: {
+          required: 'Campo obrigatório.'
+        },
+        estado: {
+          required: 'Campo obrigatório.'
+        },
+        resumoCurriculo: {
+          required: 'Campo obrigatório.'
+        },
+        descricaoCargo: {
+          required: 'Campo obrigatório.'
+        },
+        cargo: {
+          required: 'Campo obrigatório.'
+        },
+        data: {
+          required: 'Campo obrigatório.'
+        } 
+      },
+      submitHandler: function (form, values) {
+        console.log(form, values);
+        userAnswer();
+      },
+    });
+}
+
+
