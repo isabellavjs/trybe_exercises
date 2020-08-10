@@ -1,0 +1,1 @@
+### Section 7.1 exercises: JavaScript ES6 - let, const, arrow functions and template literals
