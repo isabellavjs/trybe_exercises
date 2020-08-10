@@ -40,4 +40,27 @@ figure {
         max-width: 800px;
         line-height: 35px;
     }
+
+    .row {
+        display: flex;
+        width: 100%;
+    }
+
+    .column1 {
+        flex: 50%;
+    }
+
+    .column2 {
+        flex: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background: khaki;
+        font-size: 22px;
+        margin: 30px;
+        max-width: 100%;
+    }
+
 }
