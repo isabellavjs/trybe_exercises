@@ -8,7 +8,9 @@
 - Add a new breakpoint at 900px (min-width = 900px), with specific styles (margin, images in column, background color);
 - Add a new breakpoint for large screens using min-width.
 
-2. Task 2? add three different layouts to the page
+2. Task 2: add three different layouts to the page
 - mobile
 - tablet
 - large screens
+
+3. Task 3: use media queries to change the layout of the page for printing and different screen sizes.
