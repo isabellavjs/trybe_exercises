@@ -17,3 +17,11 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+//Task 1: Add the morning classes to lesson2
+const addMorning = (object,newKey,newInput) => {
+  object[newKey] = newInput;
+  return object;
+}
+
+console.log(addMorning(lesson2,'turno','manha'));
