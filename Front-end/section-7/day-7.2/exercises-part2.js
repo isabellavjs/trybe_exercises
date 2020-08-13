@@ -83,3 +83,16 @@ const VerifyPair = (object, keyValue, inputValue) => {
   return checkEntries;
 }
 console.log(VerifyPair(lesson3,'turno','noite'));
+
+//Bonus
+// Functtion to count how many students watched Math classes
+const studentsMathClasses = (object) => {
+  let students = 0;
+  const values = Object.values(object);
+  for (let index in values) {
+    if (values.includes('Matemática') == true) {
+      students += values[index].numeroEstudantes;
+    }
+  }
+}
+console.log(studentsMathClasses(allLessons));
