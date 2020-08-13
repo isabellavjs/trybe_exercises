@@ -15,7 +15,7 @@ assert.strictEqual(sum(0,0),0,'A soma 0 + 0 e 0');
 assert.throws(() => {
   sum(4,'5');
 })
-//console.log(sum(4,'5'));
 assert.throws(() => {
   sum(4,'5')
 }, /^Error: parameters must be numbers$/);
+console.log(sum(4,5));
