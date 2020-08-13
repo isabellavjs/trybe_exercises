@@ -13,8 +13,14 @@ function myRemoveWithoutCopy(arr, item) {
 }
 
 // implemente seus testes aqui
+// Task 0 - testing if myRemoveWIthoutCopy is a function
 assert.strictEqual(typeof myRemoveWithoutCopy,'function');
+// Task 1
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3),[1, 2, 4],'Resultado inesperado');
+// Task 2
 assert.notDeepEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], 'Resultado inesperado');
-// Item 3 aqui
+// Task 3
+const newArray = [5, 6, 7, 8];
+assert.deepStrictEqual(myRemoveWithoutCopy(newArray,5),[6,7,8],'Resultado inesperado');
+// Task 4
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4], 'Resultado inesperado');
