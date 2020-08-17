@@ -60,39 +60,39 @@ _"Trybe is a school of the future that was founded with the purpose of generatin
 - [x] 7.4 Project 09: JavaScript unit tests
 
 ### Section 8: JavaScript ES6
-- []  8.1 Higher Order functions - forEach, find, some, every, sort
-- []  8.2 Higher Order functions - map and filter
-- []  8.3 Higher Order functions - reduce
-- []  8.4 Higher Order functions - spread operator, rest parameter, destructuring and more
-- []  8.5 Project 10: Zoo functions
+- [ ]  8.1 Higher Order functions - forEach, find, some, every, sort
+- [ ]  8.2 Higher Order functions - map and filter
+- [ ]  8.3 Higher Order functions - reduce
+- [ ]  8.4 Higher Order functions - spread operator, rest parameter, destructuring and more
+- [ ]  8.5 Project 10: Zoo functions
 
 ### Section 9: 
-- []  9.1 JavaScript async and callbacks
-- []  9.2 JavaScriot promises
-- []  9.3 Project 11: Shop car
+- [ ]  9.1 JavaScript async and callbacks
+- [ ]  9.2 JavaScriot promises
+- [ ]  9.3 Project 11: Shop car
 
 ### Section 10:
-- []  10.1 Jest - first steps
-- []  10.2 Jest - Async tests
-- []  10.3 Jest - simulating behaviours 
-- []  10.4 Project 12: Async jest and mocking
+- [ ]  10.1 Jest - first steps
+- [ ]  10.2 Jest - Async tests
+- [ ]  10.3 Jest - simulating behaviours 
+- [ ]  10.4 Project 12: Async jest and mocking
 
 ### Section 11:
-- []  11.1 Introduction to React - "Hello, World!"
-- []  11.2 React components
-- []  11.3 Project 13: Movie cards library
+- [ ]  11.1 Introduction to React - "Hello, World!"
+- [ ]  11.2 React components
+- [ ]  11.3 Project 13: Movie cards library
 
 ### Section 12:
-- []  12.1 State components
-- []  12.2 Events and forms at React
-- []  12.3 Project 14: Movie cards library stateful
+- [ ]  12.1 State components
+- [ ]  12.2 Events and forms at React
+- [ ]  12.3 Project 14: Movie cards library stateful
 
 ### Section 13: 
-- []  13.1 Improving the reuse of components: props.children and propTypes
-- []  13.2 React components life cycle
-- []  13.3 React Router
-- []  13.4 Project 15: Movie cards library CRUD
+- [ ]  13.1 Improving the reuse of components: props.children and propTypes
+- [ ]  13.2 React components life cycle
+- [ ]  13.3 React Router
+- [ ]  13.4 Project 15: Movie cards library CRUD
 
 ### Section 14:
-- []  14.1 Agile methodologies
-- []  14.2 Project 16: Frontend Online store
+- [ ]  14.1 Agile methodologies
+- [ ]  14.2 Project 16: Frontend Online store
