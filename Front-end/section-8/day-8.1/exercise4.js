@@ -106,15 +106,13 @@ const expected_result = [
     author: { name: 'H. P. Lovecraft', birthYear: 1890 },
     releaseYear: 1928
   }
-] ;
+];
 
 function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
-  const sortedBooks = [];
-  books.sort(function(a, b) {
-    return a.releaseYear - b.releaseYear;
-  })
+  return books.sort((aBook, bBook) => bBook.releaseYear - aBook.releaseYear)
 }
+console.log(booksOrderedByReleaseYearDesc(books));
 
 
 assert.deepEqual(booksOrderedByReleaseYearDesc(), expected_result);
