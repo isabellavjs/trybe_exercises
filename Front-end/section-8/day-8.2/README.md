@@ -6,3 +6,4 @@
 4. Create an array ordering the books which have more than 60 years of publication using filter and sort.
 5. Create an ordered array with the names of all the SCI-FI or fantasy authors.
 6. Create an array with all books with more than 60 years of publication.
+7. Find the name of the book written by someone which name starts with three initials.
