@@ -63,11 +63,11 @@ const books = [
   },
 ];
 
-function smallerName(arrayBooks) {
+function smallerName() {
   // Variavel que recebera o valor de menor nome
   let nameBook;
   //  Variavel que armazena o tamanho do titulo (name) do primeiro livro do arrayBooks (arrayBooks[0])
-  let shortestTitleLength = arrayBooks[0].name.length;
+  let shortestTitleLength = books[0].name.length;
 
   // escreva aqui o seu código
   books.forEach(item => {
@@ -75,7 +75,7 @@ function smallerName(arrayBooks) {
     let book = item.name.length;
     // Comparar se o tamanho de book e menor que o tamanho do titulo do primeiro livro do arrayBooks. Se verdadeiro, atribuir o valor de book ao livro com titulo mais curto, e atualizar a variavel nameBook com esse item.
     if (book < shortestTitleLength) {
-      book = shortestTitleLength;
+      shortestTitleLength = book;
       nameBook = item.name;
     }
   });
