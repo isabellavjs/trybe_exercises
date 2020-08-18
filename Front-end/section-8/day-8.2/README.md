@@ -4,3 +4,4 @@
 2. Create an array with objects from the array books using map and sort. Each object must contain the properties author with the author`s name and age with the author's age when the book was released. 
 3. Create an array with all objects containing the genre 'Fantasia' or 'Ficcao cientifica' using filter.
 4. Create an array ordering the books which have more than 60 years of publication using filter and sort.
+5. Create an ordered array with the names of all the SCI-FI or fantasy authors.
