@@ -5,3 +5,4 @@
 3. Create an array with all objects containing the genre 'Fantasia' or 'Ficcao cientifica' using filter.
 4. Create an array ordering the books which have more than 60 years of publication using filter and sort.
 5. Create an ordered array with the names of all the SCI-FI or fantasy authors.
+6. Create an array with all books with more than 60 years of publication.
