@@ -9,7 +9,9 @@ const names = [
 
 const getA = (acc, letter) => {
   const splittedWords = letter.split('');
-  (splittedWords.includes('a') || splittedWords.includes('A') ? acc : letter);
+  const numberOfLetters = splittedWords
+  .filter(letter => letter.toLowerCase() === 'a').length;
+  return acc + numberOfLetters;
 }
 
 function containsA() {
