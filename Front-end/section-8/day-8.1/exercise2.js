@@ -69,7 +69,6 @@ function smallerName() {
   //  Variavel que armazena o tamanho do titulo (name) do primeiro livro do arrayBooks (arrayBooks[0])
   let shortestTitleLength = books[0].name.length;
 
-  // escreva aqui o seu código
   books.forEach(item => {
     // Variavel que armazena o tamanho do titulo (name) no valor item (item = cada objeto armazenado no arrayBooks)
     let book = item.name.length;
@@ -82,6 +81,5 @@ function smallerName() {
   // Variável nameBook que receberá o valor do menor nome;
   return nameBook;
 }
-console.log(smallerName(books));
 
 assert.equal(smallerName(), 'Duna');
