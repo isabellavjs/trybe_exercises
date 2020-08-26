@@ -1,0 +1,1 @@
+### Exercices from day 8.4: spread operator, rest, destructing and object literal
