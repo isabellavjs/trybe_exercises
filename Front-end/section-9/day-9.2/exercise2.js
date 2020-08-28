@@ -1,4 +1,4 @@
-//  Exercise 2: 
+//  Exercise 2: Building a promise
 const promise = new Promise((resolve, reject) => {
   const randomArray = Array.from({length: 10}, () => Math.floor(Math.random() * 50))
   .map(element => element ** 2)
