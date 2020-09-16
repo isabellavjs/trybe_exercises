@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Pokedex extends Component {
   constructor(props) {
-    super()
+    super(props)
     this.handleClick = this.handleClick.bind(this);
 
     this.state = {
@@ -14,7 +14,7 @@ class Pokedex extends Component {
 
   handleClick = () => {
     this.setState((previousState) => ({
-      clickNumber: previousState.clickNumber + 1
+      clickPokemon: previousState.clickNumber + 1
     }))
   }
 
@@ -29,7 +29,7 @@ class Pokedex extends Component {
     const { pokemons } = this.props;
     return (
       <div className="pokedex">
-        <button onClick={this.handleClick}>{this.state.clickNumber}</button>
+        <button onClick={this.handleClick}>{this.state.Pokemon}</button>
       </div>
     )
   }
