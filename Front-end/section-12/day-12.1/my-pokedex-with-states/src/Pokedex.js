@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Pokemon from './Pokemon';
 import PropTypes from 'prop-types';
+import pokemons from './data';
 
 class Pokedex extends Component {
   constructor(props) {
@@ -8,14 +9,17 @@ class Pokedex extends Component {
     this.handleClick = this.handleClick.bind(this);
 
     this.state = {
-      clickNumber: 0,
+      index: 0,
     }
   }
 
   handleClick = () => {
     this.setState((previousState) => ({
-      clickPokemon: previousState.clickNumber + 1
+      index: previousState.index + 1
     }))
+    if ( pokemons.length - 1 === this.state.index) {
+      this.setState({index: 0})
+    }
   }
 
 
@@ -29,7 +33,8 @@ class Pokedex extends Component {
     const { pokemons } = this.props;
     return (
       <div className="pokedex">
-        <button onClick={this.handleClick}>{this.state.Pokemon}</button>
+        <Pokemon pokemon={pokemons[this.state.index]}/>
+        <button onClick={this.handleClick}>{this.state.index}</button>
       </div>
     )
   }
