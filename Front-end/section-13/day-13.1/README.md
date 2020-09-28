@@ -1,1 +1,1 @@
-### Section 13.1: Components life cicle - building an API to retrieve and filter dogs picture.
+### Section 13.1: Components life cicle - building an API to retrieve and filter dogs picture!
