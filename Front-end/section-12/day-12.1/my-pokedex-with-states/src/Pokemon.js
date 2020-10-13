@@ -8,10 +8,10 @@ class Pokemon extends Component {
     return (
       <div className='container'>
         <div className='pokemon-info'>
-        <h3>{name}</h3>
-        <p>{type}</p>
-        <p>{`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
-        <img src={image} alt={name} />
+          <h3>{name}</h3>
+          <p>{type}</p>
+          <p>{`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}</p>
+          <img src={image} alt={name} />
         </div>
       </div>
     )
@@ -19,7 +19,7 @@ class Pokemon extends Component {
 }
 
 Pokemon.propTypes = {
-  pokemon : PropTypes.shape({
+  pokemon: PropTypes.shape({
     name: PropTypes.string,
     type: PropTypes.string,
     averageWeight: PropTypes.shape({

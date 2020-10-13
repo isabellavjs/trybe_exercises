@@ -4,37 +4,68 @@ import PropTypes from 'prop-types';
 import pokemons from './data';
 
 class Pokedex extends Component {
-  constructor(props) {
-    super(props)
-    this.handleClick = this.handleClick.bind(this);
+  constructor () {
+    super();
 
     this.state = {
-      index: 0,
-    }
+      indexPokemon: 0,
+      typePokemon: null,
+    };
+    this.handleNextPokemon = this.handleNextPokemon.bind(this);
+    this.handlePokemonType = this.handlePokemonType.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
   }
 
-  handleClick = () => {
-    this.setState((previousState) => ({
-      index: previousState.index + 1
-    }))
-    if ( pokemons.length - 1 === this.state.index) {
-      this.setState({index: 0})
+  handleNextPokemon() {
+    const { indexPokemon } = this.state;
+    if (indexPokemon < pokemons.length - 1 ) {
+      this.setState((previous) => ({
+        indexPokemon: previous.indexPokemon + 1,
+      }));
     }
+    else {
+      this.setState({
+        indexPokemon: 0,
+      });
+    }
+    
   }
 
+  handlePokemonType() {
+    return pokemons.map(pokemon => pokemon.type)
+      .filter((type, index, array) => {
+        return array.indexOf(type) === index
+      });
+  }
+
+  handleFilter(type) {
+    this.setState({
+      indexPokemon: 0,
+      typePokemon: type,
+    })
+  }
+
+  filterPokemon() {
+    const { indexPokemon } = this.state;
+
+    const filtered = pokemons.filter((pokemon) => {
+      return indexPokemon
+      ? indexPokemon === pokemon.type
+      : true
+    });
+    console.log(filtered);
+    return filtered;
+  }
 
   render() {
-    {/* {pokemons.map((eachPokemon) => {
-          return <Pokemon
-            key={eachPokemon.id}
-            pokemon={eachPokemon}
-          />
-        })} */}
-    const { pokemons } = this.props;
+    const { indexPokemon } = this.state;
+    const types = this.handlePokemonType();
+    const filterTypes = this.filterPokemon();
     return (
-      <div className="pokedex">
-        <Pokemon pokemon={pokemons[this.state.index]}/>
-        <button onClick={this.handleClick}>{this.state.index}</button>
+      <div>
+        <Pokemon pokemon={pokemons[indexPokemon]} />
+        <button onClick={() => this.handleNextPokemon(indexPokemon)} >Next Pokemon</button>
+        {types.map((type, index) => <button key={index} onClick={() => this.handleFilter(type)}>{type}</button>)}
       </div>
     )
   }
