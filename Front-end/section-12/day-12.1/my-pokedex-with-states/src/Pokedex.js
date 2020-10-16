@@ -53,7 +53,6 @@ class Pokedex extends Component {
       ? indexPokemon === pokemon.type
       : true
     });
-    console.log(filtered);
     return filtered;
   }
 
