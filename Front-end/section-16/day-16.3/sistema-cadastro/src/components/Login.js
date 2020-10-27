@@ -18,8 +18,17 @@ class Login extends Component {
     this.setState( { [name]: value })
   }
 
+  shouldRedirect() {
+    const { handleLogin } = this.props;
+    const { email, senha } = this.state;
+    if (email.length > 1 && senha.length > 1) {
+      handleLogin({ email, senha })
+      this.props.history.push('/clientes')
+    }
+  }
+
   render() {
-    const { loggedIn } = this.state;
+    const { email, senha, loggedIn } = this.state;
     return(
       <div>
         <form>
@@ -32,9 +41,6 @@ class Login extends Component {
             <input type="text" name="senha" onChange={this.handleChange} />
           </label>
         </form>
-        <Route>
-          {loggedIn ? <Redirect to="/cadastrado" /> : <p>Login não efetuado</p>}
-        </Route>
       </div>
     );
   }
