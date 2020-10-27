@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { handleLogin } from '../actions';
 // import { Route, Redirect } from 'react-router-dom';
 
 
@@ -46,4 +48,13 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = (state) => ({
+  email: 'teste',
+  password: 'teste',
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  login: () => {dispatch(handleLogin)}
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
