@@ -15,7 +15,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>Sistema de cadastro</header>
         <nav>
           <Link to="/login">Login</Link>
         </nav>
