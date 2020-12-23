@@ -1,0 +1,1 @@
+# Exercises SQL - Aggregate Functions, Group By, String Manipulation
