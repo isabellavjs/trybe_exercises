@@ -26,7 +26,7 @@ db.superheroes.find({"aspects.eyeColor": 'blue'}).count();
 db.superheroes.find({"aspects.hairColor": {$in: ["Black", "No hair"]}});
 
 // Exercício 10: Retorne o total de super-heróis com cabelos pretos ou carecas ( "No Hair" ) - CHECAR.
-db.superheroes.find({"aspects.hairColor": {$in: ["Black", "No hair"]}}).count();
+db.superheroes.find({"aspects.hairColor": {$in: ["black", "No hair"]}}).count();
 
 // Exercício 11: Retorne o total de super-heróis que não tenham cabelos pretos ou não sejam carecas - CHECAR
 db.superheroes.find({"aspects.hairColor": {$nin: ["Black", "No hair"]}}).count();
